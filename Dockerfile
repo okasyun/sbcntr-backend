@@ -1,4 +1,5 @@
 # Multi stage building strategy for reducing image size.
+ARG AWS_ACCOUNT_ID
 FROM ${AWS_ACCOUNT_ID}.dkr.ecr.ap-northeast-1.amazonaws.com/prod-base:golang1.16.8-alpine3.13 AS build-env
 ENV GO111MODULE=on
 RUN mkdir /app
