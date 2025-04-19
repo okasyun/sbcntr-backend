@@ -7,9 +7,6 @@ env:
     AWS_REGION_NAME: ap-northeast-1
 
 phases:
-  install:
-    runtime-versions:
-      docker: 27
   pre_build:
     commands:
       - AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
